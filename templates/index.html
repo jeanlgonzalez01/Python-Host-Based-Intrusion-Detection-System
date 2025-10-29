@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIDS Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+   
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Host Intrusion Detection System Dashboard</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#" id="login-tab">Login</a></li>
+                <li><a href="#" id="network-tab">Network</a></li>
+                <li><a href="#" id="resources-tab">Resources</a></li>
+                <li><a href="#" id="processes-tab">Processes</a></li>
+                <li><a href="#" id="files-tab">File Integrity Monitor</a></li>
+                <li><a href="#" id="logins-tab">Logins</a></li>
+            </ul>
+        </nav>
+        <main id="dashboard-content">
+            <div id="login" class="tab-content">
+                <h2>Login</h2>
+                <form id="login-form">
+                    <div>
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" required>
+                    </div>
+                    <div>
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" required>
+                    </div>
+                    <button type="submit">Login</button>
+                    <p id="login-error" style="color:red;"></p>
+                </form>
+            </div>
+            <div id="network" class="tab-content" style="display:none;">
+                <h2>Network Traffic</h2>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Source IP</th>
+                                <th>Destination IP</th>
+                                <th>Source Port</th>
+                                <th>Destination Port</th>
+                                <th>Protocol</th>
+                                <th>Packet Size</th>
+                                <th>Timestamp</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Data will be inserted here by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div id="resources" class="tab-content" style="display:none;">
+                <h2>System Resources</h2>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Metric</th>
+                                <th>Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+        
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div id="processes" class="tab-content" style="display:none;">
+                <h2>Processes Monitor</h2>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Start Time</th>
+                                <th>End Time</th>
+                                <th>Status</th>
+                                <th>User</th>
+                                <th>Role</th>
+                                <th>Executable Name</th>
+                                <th>Executable Path</th>
+                                <th>CPU Usage</th>
+                                <th>RAM Usage</th>
+                                <th>Thread Count</th>
+                                <th>Usage Level</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Data will be inserted here by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div id="files" class="tab-content" style="display:none;">
+                <h2>File Integrity Alerts</h2>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>File Name</th>
+                                <th>File Path</th>
+                                <th>Creation Time</th>
+                                <th>Modification Time</th>
+                                <th>Deletion Time</th>
+                                <th>Hash Value</th>
+                                <th>Event Type</th>
+                                <th>Event Time</th>
+                                <th>User</th>
+                                <th>Role</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Data will be inserted here by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div id="logins" class="tab-content" style="display:none;">
+                <h2>Logins</h2>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Username</th>
+                                <th>Login Time</th>
+                                <th>Logout Time</th>
+                                <th>IP Address</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Data will be inserted here by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+        <button id="logout" style="display:none;">Logout</button>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
