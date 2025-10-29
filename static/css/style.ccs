@@ -1,0 +1,147 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+header {
+    background: #007BFF;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav {
+    background: #333;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #fff;
+    padding: 15px 20px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+nav ul li a:hover {
+    background: #575757;
+}
+
+/* Tab content - no scrolling here */
+.tab-content {
+    padding: 20px;
+    background: white;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    overflow: hidden; /* Changed from overflow-y: auto */
+}
+
+/* Forms */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin: auto;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input {
+    padding: 10px;
+    margin-top: 5px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px;
+}
+
+/* Scrollable table container */
+.table-container {
+    max-height: 400px;
+    overflow-y: auto;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    position: relative;
+}
+
+/* Table styles with fixed header */
+.table-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-container thead {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.table-container th {
+    background-color: #f4f4f4;
+    position: sticky;
+    top: 0;
+}
+
+.table-container th, 
+.table-container td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ccc;
+}
+
+/* Resource grid styles (non-scrollable) */
+.resource-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.resource-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.resource-card h3 {
+    margin-top: 0;
+    color: #007BFF;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.resource-card table {
+    width: 100%;
+    margin-top: 10px;
+    border-collapse: collapse;
+}
+
+.resource-card th,
+.resource-card td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.resource-card th {
+    background-color: #f8f9fa;
+}
